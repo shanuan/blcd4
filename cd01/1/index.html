@@ -1,0 +1,77 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>				
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>		
+<script src="https://littleflute.github.io/JavaScript/blApp.js"></script>		
+<div id="id_div_mp4i_bat_info" >								
+<a target="_blank" href="https://github.com/littleflute/bat/edit/master/bat/mp4index/mp4i.bat">v1.3. 21 * </a>	
+<a href="..">[..]</a> <button id="id_btn_4_blApp">+++++++++++blApp+++++++++</button>	
+</div>						 
+<div id="DivCurTime"></div> 			
+<br>  
+<div id="DivButtons"> 				
+<button onclick="play('Big Daddy Weave   The Lion And The Lamb.mp3')">1:Big Daddy Weave   The Lion And The Lamb.mp3</button> 
+<button onclick="play('Brandon Heath   Whole Heart (Bonus).mp3')">2:Brandon Heath   Whole Heart (Bonus).mp3</button> 
+<button onclick="play('Casting Crowns   Oh My Soul.mp3')">3:Casting Crowns   Oh My Soul.mp3</button> 
+<button onclick="play('Chris Tomlin   Home.mp3')">4:Chris Tomlin   Home.mp3</button> 
+<button onclick="play('Francesca Battistelli   Giants Fall.mp3')">5:Francesca Battistelli   Giants Fall.mp3</button> 
+<button onclick="play('Hillary Scott & The Scott Family   Thy Will.mp3')">6:Hillary Scott & The Scott Family   Thy Will.mp3</button> 
+<button onclick="play('Hillsong Worship   What A Beautiful Name.mp3')">7:Hillsong Worship   What A Beautiful Name.mp3</button> 
+<button onclick="play('Jeremy Camp   Word Of Life.mp3')">8:Jeremy Camp   Word Of Life.mp3</button> 
+<button onclick="play('Kari Jobe   Let Your Glory Fall.mp3')">9:Kari Jobe   Let Your Glory Fall.mp3</button> 
+<button onclick="play('Mallary Hope   Now (Bonus).mp3')">10:Mallary Hope   Now (Bonus).mp3</button> 
+<br> 
+<button onclick="play('Matt Maher   Your Love Defends Me.mp3')">11:Matt Maher   Your Love Defends Me.mp3</button> 
+<button onclick="play('Matthew West   Broken Things.mp3')">12:Matthew West   Broken Things.mp3</button> 
+<button onclick="play('Natalie Grant   King Of The World.mp3')">13:Natalie Grant   King Of The World.mp3</button> 
+<button onclick="play('One Sonic Society   Great Are You Lord.mp3')">14:One Sonic Society   Great Are You Lord.mp3</button> 
+<button onclick="play('Passion (Featuring Kristian Stanfill)   Glorious Day (Radio Version) (Bonus).mp3')">15:Passion (Featuring Kristian Stanfill)   Glorious Day (Radio Version) (Bonus).mp3</button> 
+<button onclick="play('Sidewalk Prophets   Come To The Table.mp3')">16:Sidewalk Prophets   Come To The Table.mp3</button> 
+<button onclick="play('Tenth Avenue North   I Have This Hope.mp3')">17:Tenth Avenue North   I Have This Hope.mp3</button> 
+<button onclick="play('Third Day   Revival (Radio Mix) (Bonus).mp3')">18:Third Day   Revival (Radio Mix) (Bonus).mp3</button> 
+<button onclick="play('Zach Williams    Chain Breaker.mp3')">19:Zach Williams    Chain Breaker.mp3</button> 
+ </div> 			
+<br> 	
+<div id="id_div_4_gif" style="border:1px solid green;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_jpg" style="border:1px solid blue;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_png" style="border:1px solid blue;" >				
+</div> 								 
+<br> 	
+<div id="id_div_4_lrcJS" style="border:1px solid red;display: none;" >		
+</div> 								
+<script>  
+var str4V = '<video id="myVideo" width="720" height="480" controls> ';				
+str4V += '<source src="v1.mp4" type="video/mp4">Your browser does not support HTML5 video.'; 	
+str4V += '</video>';  										
+var md4v = blo0.blMDiv(document.body,"id_mdiv_4_myVideo" , str4V , 300,100,500,400,blColor[1]); 	
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+var _loadScript = function (id,src){					
+var	r = document.createElement("script");				
+r.id = id;								
+r.src = src; 								
+document.body.appendChild(r);						
+}									
+_loadScript ("id_script_plx","plx.js");				
+</script> 
+</body> 
