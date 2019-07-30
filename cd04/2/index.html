@@ -1,0 +1,66 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>		
+<div id="id_div_mp4i_bat_info" > <a target="_blank" href="https://github.com/littleflute/bat/edit/master/bat/mp4index/mp4i.bat">v1.2. 113 * </a> </div>			 
+<div id="DivCurTime"></div> 
+<br>  
+<button onclick="play('Absolutely Sweet Marie (Take 1, alternate take).mp3')">1:Absolutely Sweet Marie (Take 1, alternate take).mp3</button> 
+<button onclick="play('Can You Please Crawl Out Your Window  (Take 1, alternate take).mp3')">2:Can You Please Crawl Out Your Window  (Take 1, alternate take).mp3</button> 
+<button onclick="play('Highway 61 Revisited (Take 3, alternate take).mp3')">3:Highway 61 Revisited (Take 3, alternate take).mp3</button> 
+<button onclick="play('Just Like a Woman (Take 4, alternate take).mp3')">4:Just Like a Woman (Take 4, alternate take).mp3</button> 
+<button onclick="play('Just Like Tom Thumb's Blues (Take 3, rehearsal).mp3')">5:Just Like Tom Thumb's Blues (Take 3, rehearsal).mp3</button> 
+<button onclick="play('Leopard-Skin Pill-Box Hat (Take 8, alternate take).mp3')">6:Leopard-Skin Pill-Box Hat (Take 8, alternate take).mp3</button> 
+<button onclick="play('Lunatic Princess (Take 1).mp3')">7:Lunatic Princess (Take 1).mp3</button> 
+<button onclick="play('One of Us Must Know (Sooner or Later) (Take 19, alternate take).mp3')">8:One of Us Must Know (Sooner or Later) (Take 19, alternate take).mp3</button> 
+<button onclick="play('Positively 4th Street (Take 5, alternate take).mp3')">9:Positively 4th Street (Take 5, alternate take).mp3</button> 
+<button onclick="play('Queen Jane Approximately (Take 5, alternate take).mp3')">10:Queen Jane Approximately (Take 5, alternate take).mp3</button> 
+<br> 
+<button onclick="play('She's Your Lover Now (Take 6, rehearsal).mp3')">11:She's Your Lover Now (Take 6, rehearsal).mp3</button> 
+<button onclick="play('Stuck Inside of Mobile with the Memphis Blues Again (Take 13, alternate take).mp3')">12:Stuck Inside of Mobile with the Memphis Blues Again (Take 13, alternate take).mp3</button> 
+<button onclick="play('Tombstone Blues (Take 1, alternate take).mp3')">13:Tombstone Blues (Take 1, alternate take).mp3</button> 
+<button onclick="play('Visions of Johanna (Take 5, rehearsal).mp3')">14:Visions of Johanna (Take 5, rehearsal).mp3</button> 
+<br> 	
+<div id="id_div_4_jpg" style="border:1px solid blue;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_png" style="border:1px solid blue;" >				
+</div> 								 
+<br> 	
+<div id="id_div_4_lrcJS" style="border:1px solid red;display: none;" >		
+</div> 								
+<br> 
+<video id="myVideo" width="720" height="480" controls> 
+ <source src="v1.mp4" type="video/mp4">  
+Your browser does not support HTML5 video. 
+</video>  
+<script>  
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+var _loadScript = function (id,src){					
+var	r = document.createElement("script");		
+r.id = id;				
+r.src = src; 				
+document.body.appendChild(r);		
+}					
+_loadScript ("id_script_plx","plx.js");				
+</script> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>				
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>		
+<script src="https://littleflute.github.io/JavaScript/blApp.js"></script>		
+</body> 

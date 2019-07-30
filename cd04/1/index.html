@@ -1,0 +1,77 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>				
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>		
+<script src="https://littleflute.github.io/JavaScript/blApp.js"></script>		
+<div id="id_div_mp4i_bat_info" >								
+<a target="_blank" href="https://github.com/littleflute/bat/edit/master/bat/mp4index/mp4i.bat">v1.3. 21 * </a>	
+<a href="..">[..]</a> <button id="id_btn_4_blApp">+++++++++++blApp+++++++++</button>	
+</div>						 
+<div id="DivCurTime"></div> 			
+<br>  
+<div id="DivButtons"> 				
+<button onclick="play('Bob Dylan's 115th Dream (Take 2, solo acoustic).mp3')">1:Bob Dylan's 115th Dream (Take 2, solo acoustic).mp3</button> 
+<button onclick="play('California (Take 1, solo acoustic).mp3')">2:California (Take 1, solo acoustic).mp3</button> 
+<button onclick="play('Desolation Row (Take 1, alternate take).mp3')">3:Desolation Row (Take 1, alternate take).mp3</button> 
+<button onclick="play('Desolation Row (Take 2, piano demo).mp3')">4:Desolation Row (Take 2, piano demo).mp3</button> 
+<button onclick="play('Farewell, Angelina (Take 1, solo acoustic).mp3')">5:Farewell, Angelina (Take 1, solo acoustic).mp3</button> 
+<button onclick="play('I'll Keep It with Mine (Take 1, piano demo).mp3')">6:I'll Keep It with Mine (Take 1, piano demo).mp3</button> 
+<button onclick="play('If You Gotta Go, Go Now (Take 2, alternate take).mp3')">7:If You Gotta Go, Go Now (Take 2, alternate take).mp3</button> 
+<button onclick="play('It Takes a Lot to Laugh, It Takes a Train to Cry (Take 8, alternate take).mp3')">8:It Takes a Lot to Laugh, It Takes a Train to Cry (Take 8, alternate take).mp3</button> 
+<button onclick="play('Like a Rolling Stone (Take 11, alternate take).mp3')">9:Like a Rolling Stone (Take 11, alternate take).mp3</button> 
+<button onclick="play('Like a Rolling Stone (Take 5, rehearsal).mp3')">10:Like a Rolling Stone (Take 5, rehearsal).mp3</button> 
+<br> 
+<button onclick="play('Love Minus Zero - No Limit (Take 2, acoustic}.mp3')">11:Love Minus Zero - No Limit (Take 2, acoustic}.mp3</button> 
+<button onclick="play('Medicine Sunday (Take 1, early version of Temporary Like Achilles).mp3')">12:Medicine Sunday (Take 1, early version of Temporary Like Achilles).mp3</button> 
+<button onclick="play('Mr. Tambourine Man (Take 3, with band, incomplete).mp3')">13:Mr. Tambourine Man (Take 3, with band, incomplete).mp3</button> 
+<button onclick="play('On the Road Again (Take 4, alternate take).mp3')">14:On the Road Again (Take 4, alternate take).mp3</button> 
+<button onclick="play('Outlaw Blues (Take 2, alternate take).mp3')">15:Outlaw Blues (Take 2, alternate take).mp3</button> 
+<button onclick="play('She Belongs to Me (Take 1, solo acoustic).mp3')">16:She Belongs to Me (Take 1, solo acoustic).mp3</button> 
+<button onclick="play('Sitting on a Barbed Wire Fence (Take 2, unreleased take).mp3')">17:Sitting on a Barbed Wire Fence (Take 2, unreleased take).mp3</button> 
+<button onclick="play('Subterranean Homesick Blues (Take 1, alternate take).mp3')">18:Subterranean Homesick Blues (Take 1, alternate take).mp3</button> 
+<button onclick="play('You Don't Have to Do That (Take 1, solo acoustic).mp3')">19:You Don't Have to Do That (Take 1, solo acoustic).mp3</button> 
+ </div> 			
+<br> 	
+<div id="id_div_4_gif" style="border:1px solid green;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_jpg" style="border:1px solid blue;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_png" style="border:1px solid blue;" >				
+</div> 								 
+<br> 	
+<div id="id_div_4_lrcJS" style="border:1px solid red;display: none;" >		
+</div> 								
+<script>  
+var str4V = '<video id="myVideo" width="720" height="480" controls> ';				
+str4V += '<source src="v1.mp4" type="video/mp4">Your browser does not support HTML5 video.'; 	
+str4V += '</video>';  										
+var md4v = blo0.blMDiv(document.body,"id_mdiv_4_myVideo" , str4V , 300,100,500,400,blColor[1]); 	
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+var _loadScript = function (id,src){					
+var	r = document.createElement("script");				
+r.id = id;								
+r.src = src; 								
+document.body.appendChild(r);						
+}									
+_loadScript ("id_script_plx","plx.js");				
+</script> 
+</body> 
