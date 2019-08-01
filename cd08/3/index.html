@@ -1,0 +1,82 @@
+<!DOCTYPE html>	  
+<html>  
+<body> 
+<script src="https://www.w3schools.com/lib/w3.js"></script>				
+<script src="https://littleflute.github.io/JavaScript/blclass.js"></script>		
+<script src="https://littleflute.github.io/JavaScript/blApp.js"></script>		
+<div id="id_div_mp4i_bat_info" >								
+<a target="_blank" href="https://github.com/littleflute/bat/edit/master/bat/mp4index/mp4i.bat">v1.3. 21 * </a>	
+<a href="..">[..]</a> <button id="id_btn_4_blApp">+++++++++++blApp+++++++++</button>	
+</div>						 
+<div id="DivCurTime"></div> 			
+<br>  
+<div id="DivButtons"> 				
+<button onclick="play('(Ghost) Riders in the Sky.mp3')">1:(Ghost) Riders in the Sky.mp3</button> 
+<button onclick="play('A Boy Named Sue (live).mp3')">2:A Boy Named Sue (live).mp3</button> 
+<button onclick="play('After the Ball.mp3')">3:After the Ball.mp3</button> 
+<button onclick="play('Bull Rider.mp3')">4:Bull Rider.mp3</button> 
+<button onclick="play('Cocaine Blues (live).mp3')">5:Cocaine Blues (live).mp3</button> 
+<button onclick="play('Flesh and Blood.mp3')">6:Flesh and Blood.mp3</button> 
+<button onclick="play('Folsom Prison Blues (live).mp3')">7:Folsom Prison Blues (live).mp3</button> 
+<button onclick="play('Highway Patrolman.mp3')">8:Highway Patrolman.mp3</button> 
+<button onclick="play('Hit the Road and Go.mp3')">9:Hit the Road and Go.mp3</button> 
+<button onclick="play('I Will Rock and Roll with You.mp3')">10:I Will Rock and Roll with You.mp3</button> 
+<br> 
+<button onclick="play('I'm Gonna Sit on the Porch and Pick on My Old Guitar.mp3')">11:I'm Gonna Sit on the Porch and Pick on My Old Guitar.mp3</button> 
+<button onclick="play('Man in Black.mp3')">12:Man in Black.mp3</button> 
+<button onclick="play('No Expectations.mp3')">13:No Expectations.mp3</button> 
+<button onclick="play('One Piece at a Time.mp3')">14:One Piece at a Time.mp3</button> 
+<button onclick="play('Oney.mp3')">15:Oney.mp3</button> 
+<button onclick="play('Rockabilly Blues (Texas 1955).mp3')">16:Rockabilly Blues (Texas 1955).mp3</button> 
+<button onclick="play('San Quentin #2 (live).mp3')">17:San Quentin #2 (live).mp3</button> 
+<button onclick="play('Singin' in Vietnam Talkin' Blues.mp3')">18:Singin' in Vietnam Talkin' Blues.mp3</button> 
+<button onclick="play('Sunday Morning Coming Down.mp3')">19:Sunday Morning Coming Down.mp3</button> 
+<button onclick="play('The Last Time.mp3')">20:The Last Time.mp3</button> 
+<br> 
+<button onclick="play('Wanted Man.mp3')">21:Wanted Man.mp3</button> 
+<button onclick="play('What is Truth.mp3')">22:What is Truth.mp3</button> 
+<button onclick="play('Without Love.mp3')">23:Without Love.mp3</button> 
+ </div> 			
+<br> 	
+<div id="id_div_4_gif" style="border:1px solid green;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_jpg" style="border:1px solid blue;" >				
+</div> 									
+<br> 	
+<div id="id_div_4_png" style="border:1px solid blue;" >				
+</div> 								 
+<br> 	
+<div id="id_div_4_lrcJS" style="border:1px solid red;display: none;" >		
+</div> 								
+<script>  
+var str4V = '<video id="myVideo" width="720" height="480" controls> ';				
+str4V += '<source src="v1.mp4" type="video/mp4">Your browser does not support HTML5 video.'; 	
+str4V += '</video>';  										
+var md4v = blo0.blMDiv(document.body,"id_mdiv_4_myVideo" , str4V , 300,100,500,400,blColor[1]); 	
+var vid = document.getElementById("myVideo"); 
+function play(i) {
+    vid.src=i; 
+    vid.load();
+    vid.play(); 
+}
+function getCurTime() {  
+   document.getElementById("DivCurTime").innerHTML= vid.currentTime; 
+}   
+function setCurTime(t) { 
+   vid.currentTime=t;  
+   getCurTime();
+}  
+function moveMS(ms) { 
+  vid.currentTime+=ms;
+  getCurTime();  
+}   
+var _loadScript = function (id,src){					
+var	r = document.createElement("script");				
+r.id = id;								
+r.src = src; 								
+document.body.appendChild(r);						
+}									
+_loadScript ("id_script_plx","plx.js");				
+</script> 
+</body> 
